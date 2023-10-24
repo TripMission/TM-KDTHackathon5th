@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
+import './pages/Main'
 
 class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <h1> npm run start </h1>
-        <h1> 이거 누르면 시작함 </h1>
-
+        <h1>Hello???</h1>
       </div>
     );
   }
