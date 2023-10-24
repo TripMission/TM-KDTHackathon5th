@@ -1,7 +1,19 @@
-.main {
+.wrap {
     height : 100vh
 }
 .layout{
     height : 5%;
-    border-top : solid black 0.05rem
+    border-top : solid black 0.05rem;
+    padding : 5%
+}
+.main {
+    height : 95%;
+    padding : 5%
+}
+.geoSelect {
+    font-size : 1rem;
+    font-weight : bold
+}
+.geoRecommendSelect{
+    font-size : 0.7rem
 }
