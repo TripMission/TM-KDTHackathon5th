@@ -1,5 +1,6 @@
 .wrap {
-    height : 100vh
+    height : 95vh;
+    overflow:hidden;
 }
 .layout{
     height : 5%;
@@ -16,4 +17,20 @@
 }
 .geoRecommendSelect{
     font-size : 0.7rem
+}
+.mainPanel{
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : center;
+    padding : 2%;
+    height : 100%;
+    overflow : auto;
+}
+
+.Panel{
+    border : solid black 0.1rem;
+    border-radius : 10px;
+    margin : 2% 4% 2% 4%;
+    height : 15%;
+    width : 40%;
 }
