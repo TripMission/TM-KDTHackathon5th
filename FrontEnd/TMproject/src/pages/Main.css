@@ -1,7 +1,36 @@
-.main {
-    height : 100vh
+.wrap {
+    height : 95vh;
+    overflow:hidden;
 }
 .layout{
     height : 5%;
-    border-top : solid black 0.05rem
+    border-top : solid black 0.05rem;
+    padding : 5%
+}
+.main {
+    height : 95%;
+    padding : 5%
+}
+.geoSelect {
+    font-size : 1rem;
+    font-weight : bold
+}
+.geoRecommendSelect{
+    font-size : 0.7rem
+}
+.mainPanel{
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : center;
+    padding : 2%;
+    height : 100%;
+    overflow : auto;
+}
+
+.Panel{
+    border : solid black 0.1rem;
+    border-radius : 10px;
+    margin : 2% 4% 2% 4%;
+    height : 15%;
+    width : 40%;
 }
