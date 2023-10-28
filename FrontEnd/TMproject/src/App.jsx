@@ -1,15 +1,19 @@
 import React from 'react';
-import './App.css';
-import './pages/Main'
+import { Routes, Route } from "react-router-dom";
+import Main from './pages/Main'
+import MyPage from './pages/MyPage'
+import SubPage from './pages/SubPage'
 
-class App extends React.Component {
-  render() {
+function App() {
     return (
-      <div className='App'>
-        <h1>Hello???</h1>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/subpage" element={<SubPage />} />
+        </Routes>
       </div>
     );
   }
-}
-
+  
 export default App;
