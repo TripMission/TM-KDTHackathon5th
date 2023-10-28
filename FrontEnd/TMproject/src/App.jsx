@@ -6,13 +6,13 @@ import SubPage from './pages/SubPage'
 
 function App() {
     return (
-      <div className="App">
+      <>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/subpage" element={<SubPage />} />
         </Routes>
-      </div>
+      </>
     );
   }
   
