@@ -17,3 +17,5 @@ export const THEME = {
     boxshadow:
       "rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px",
   };
+
+  export const regionName = ['서울','경기','인천','강원','충남','충북','대전','세종','경남','경북','대구','울산','부산','전남','전북','광주','제주']
