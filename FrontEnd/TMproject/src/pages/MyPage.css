@@ -1,0 +1,75 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+body, h1 {
+    margin:0;
+}
+
+.container {
+    display:flex;
+    flex-direction:column;
+    min-height:100vh; 
+    background-color:darkcyan; /* 임시 */
+}
+
+.container > header {
+    background-color:red; /* 임시 */
+    flex-grow:0;
+}
+
+/* 콘텐트 시작 */
+.container > .content {
+    display:flex;
+    flex-direction:column;
+    flex-grow:1; 
+}
+
+.container > .content > .info {
+    background-color: saddlebrown; /* 임시 */
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+    
+    flex-grow:1;
+
+}
+
+.content > .info > img {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+
+  
+.container > .content > .score {
+    background-color:gold; /* 임시 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis:150px;
+    
+    flex-grow:1;
+}
+
+.container > .content > .complete-list {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:pink; /* 임시 */
+    flex-grow:2;
+}
+
+/* 콘텐트 끝 */
+
+.container > footer {
+    flex-grow:0;
+    background-color:green; /* 임시 */
+    display:flex;
+    justify-content:center;
+}
