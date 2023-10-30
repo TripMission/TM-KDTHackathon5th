@@ -9,6 +9,7 @@ function App() {
       <>
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/Main" element={<Main />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/subpage" element={<SubPage />} />
         </Routes>

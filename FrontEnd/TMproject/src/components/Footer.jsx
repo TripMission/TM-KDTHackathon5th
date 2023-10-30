@@ -16,8 +16,8 @@ export default function Footer({ hasFooter }) {
   return (
     <Main>
       <FooterItem
-        onClick={() => navigate("/main")}
-        selected={getNthPath(1) === "main"}
+        onClick={() => navigate("/Main")}
+        selected={getNthPath(1) === "Main"}
       >
         <HomeIcon />
         메인
@@ -27,36 +27,23 @@ export default function Footer({ hasFooter }) {
           load();
           setTimeout(() => {
             endLoad();
-            navigate("/question");
+            navigate("/SubPage");
           }, Math.random() * 300 + 300);
         }}
-        selected={getNthPath(1) === "question"}
+        selected={getNthPath(1) === "SubPage"}
       >
         <QuestionIcon />
-        질문
+        서브
       </FooterItem>
       <FooterItem
         onClick={() => {
           load();
           setTimeout(() => {
             endLoad();
-            navigate("/activity");
+            navigate("/MyPage");
           }, Math.random() * 300 + 300);
         }}
-        selected={getNthPath(1) === "activity"}
-      >
-        <ActivityIcon />
-        활동
-      </FooterItem>
-      <FooterItem
-        onClick={() => {
-          load();
-          setTimeout(() => {
-            endLoad();
-            navigate("/myhome");
-          }, Math.random() * 300 + 300);
-        }}
-        selected={getNthPath(1) === "myhome"}
+        selected={getNthPath(1) === "MyPage"}
       >
         <ProfileIcon />
         마이홈
@@ -67,7 +54,7 @@ export default function Footer({ hasFooter }) {
 
 const Main = styled.footer`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   height: 5rem;
 
