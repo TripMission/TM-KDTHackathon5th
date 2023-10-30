@@ -58,5 +58,5 @@ const Back = styled.button`
   background: none;
   border: none;
   padding: 0;
-  margin-top: -2px;
+  align-items: center;
 `;

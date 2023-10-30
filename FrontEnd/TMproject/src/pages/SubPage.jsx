@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function SubPage() {
     return (
-        <Layout title="도/시 페이지">
+        <Layout title="도/시 페이지" hasBackButton>
             <Wrapper>
                 <StyledH1>대구시</StyledH1>
             </Wrapper>
