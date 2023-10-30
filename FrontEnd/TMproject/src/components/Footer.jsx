@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { THEME } from "../constants/colors";
-import { HomeIcon, QuestionIcon, ActivityIcon, ProfileIcon } from "./Icons";
+import { HomeIcon, ActivityIcon, ProfileIcon } from "./Icons";
 import usePath from "../hooks/usePath";
 import useLoading from "../hooks/useLoading";
 import React from 'react'
@@ -32,8 +32,8 @@ export default function Footer({ hasFooter }) {
         }}
         selected={getNthPath(1) === "SubPage"}
       >
-        <QuestionIcon />
-        서브
+        <ActivityIcon />
+        지역
       </FooterItem>
       <FooterItem
         onClick={() => {
@@ -76,7 +76,7 @@ const FooterItem = styled.button`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 4rem;
+  height: 3rem;
   gap: 4px;
   font-size: 0.9rem;
   color: ${(p) => (p.selected ? THEME.darker : THEME.black400)};
