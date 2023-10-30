@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./MyPage.css";
+import "../components/Header.jsx";
 
 function MyPage() {
   return (
@@ -8,7 +9,9 @@ function MyPage() {
       <div class="container">
 
         <header>
-          <h1>mypage</h1>
+          
+          {/* <h1>mypage</h1> */}
+
         </header>
 
         <section class="content">
