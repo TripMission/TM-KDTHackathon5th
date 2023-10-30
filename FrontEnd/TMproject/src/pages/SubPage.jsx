@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import { THEME } from "../constants/colors";
+import React from 'react';
 
 export default function SubPage() {
     return (
