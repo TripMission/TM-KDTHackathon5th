@@ -3,16 +3,19 @@ import React from "react";
 import "./MyPage.css";
 import "../components/Header.jsx";
 
+import AppBarHeader from "../components/AppBarHeader";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+
+
 function MyPage() {
+
   return (
     <>
       <div class="container">
 
-        <header>
-          
-          {/* <h1>mypage</h1> */}
-
-        </header>
+        <AppBarHeader/>
 
         <section class="content">
           <div class="info">
@@ -38,9 +41,7 @@ function MyPage() {
 
         </section>
 
-        <footer>
-          <h1>푸터?</h1>
-        </footer>
+        <Footer hasFooter={true} />
 
       </div>
 
