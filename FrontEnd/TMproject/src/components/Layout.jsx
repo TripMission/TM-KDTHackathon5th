@@ -2,6 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
 import { THEME } from "../constants/colors";
+import React from 'react'
 
 export default function Layout({
   children,

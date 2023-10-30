@@ -4,6 +4,7 @@ import { THEME } from "../constants/colors";
 import { HomeIcon, QuestionIcon, ActivityIcon, ProfileIcon } from "./Icons";
 import usePath from "../hooks/usePath";
 import useLoading from "../hooks/useLoading";
+import React from 'react'
 
 export default function Footer({ hasFooter }) {
   const navigate = useNavigate();
