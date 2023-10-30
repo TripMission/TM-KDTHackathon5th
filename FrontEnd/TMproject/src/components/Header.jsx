@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { THEME } from "../constants/colors";
+import React from 'react'
 
 export default function Header({ title, hasBackButton, onClickBackBtn }) {
   const navigate = useNavigate();
