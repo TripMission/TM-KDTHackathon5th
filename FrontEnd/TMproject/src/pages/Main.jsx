@@ -3,6 +3,7 @@ import './Main.css';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import RegionButton from '../components/RegionButton.jsx'
+import Layout from "../components/Layout";
 
 
 class Main extends React.Component {
@@ -11,16 +12,17 @@ class Main extends React.Component {
         <div className = 'wrap'>
           <div>
           </div>
-           <div className = 'layout'>
-              <h1>Main Page</h1>
-           </div>
+          <Layout title="메인 페이지" hasBackButton>
            <div className = 'main'>
-            <div className = 'geoSelect'>지역을 선택해주세용???</div>
+            <div className = 'geoSelect'>지역을 선택해주세요</div>
             <div className = 'geoRecommendSelect'>추천받고 싶은 지역을 선택하세요</div>
             <div className = 'mainPanel'>
               <RegionButton></RegionButton>
             </div>
            </div>
+           <Footer hasFooter={true} />
+           </Layout>
+
         </div>
     );
   }
