@@ -75,6 +75,7 @@ class RegionButton extends React.Component{
             left: '50%',
             transform: 'translate(-50%, -50%)',
             zIndex: 1, 
+            fontFamily: '"Noto Sans KR", sans-serif',
         };
 
         return (
