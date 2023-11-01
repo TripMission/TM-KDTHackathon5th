@@ -49,13 +49,43 @@ class RegionButton extends React.Component{
         this.region = props.region
     }
 
-    RBtnStyle(){
-        print(this.props.src)
-        return {background : this.props.src}
-    }
-    render(){
-       return(
-        <button className="custom-btn btn-3"><img src = {this.props.src}></img></button>
-       ) 
+    
+    render() {
+        const containerStyle = {
+            position: 'relative',
+        };
+
+        const overlayStyle = {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(255, 255, 255, 0)',
+        };
+
+        const imgStyle = {
+            filter: 'brightness(80%)',
+        };
+        const textStyle = {
+            color: 'white',
+            fontSize : '2rem',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 1, 
+            fontFamily: '"Noto Sans KR", sans-serif',
+        };
+
+        return (
+            <a href='http://localhost:3001/subpage'>
+                <button onTouchStart={this.RegionHoverHandler} className="custom-btn btn-3" style={containerStyle}>
+                    <div style={overlayStyle}></div>
+                    <img src={this.src} style = {imgStyle} alt={this.region} />
+                    <div style={textStyle}>{`${this.region}`}</div>
+                </button>
+            </a>
+        );
     }
 }
