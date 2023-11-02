@@ -4,10 +4,18 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import RegionButton from '../components/RegionButton.jsx'
 import Layout from "../components/Layout";
-
+import { GEOLOCATIONOPTIONS } from '../components/GeolocationConst.js';
+import geolocationSuccess from '../components/GeolocationConst.js';
 
 class Main extends React.Component {
   render() {
+    
+    function error(err) {
+      console.log(err)
+    }
+
+    navigator.geolocation.getCurrentPosition(geolocationSuccess, error, GEOLOCATIONOPTIONS);
+
     return (
         <div className = 'wrap'>
           <div>
