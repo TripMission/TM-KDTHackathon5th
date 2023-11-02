@@ -36,7 +36,23 @@ body, h1 {
 
     flex-direction:column;
     
-    flex-grow:1;
+    flex-grow:0;
+
+}
+
+/* .container > .content > .info > .info-text{
+    background-color: rebeccapurple;
+    display:flex;
+    flex-grow:0;
+    padding: 0px;
+    margin: 0;
+} */
+
+.container > .content > .info > .info-text > h2{
+    /* background-color: violet; */
+    flex-grow:0;
+    padding: 0px;
+    margin: 0;
 
 }
 
@@ -52,9 +68,14 @@ body, h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis:150px;
-    
-    flex-grow:1;
+    flex-grow:0;
+}
+
+.container > .content > .score > h2 {
+    background-color: blue; 
+    flex-grow:0;
+    padding: 10px;
+    margin: 0;
 }
 
 .container > .content > .complete-list {
