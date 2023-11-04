@@ -11,7 +11,20 @@ import Chip from '@mui/material/Chip';
 import Avatar from '@mui/material/Avatar';
 // import Stack from '@mui/material/Stack';
 
-
+function ProdListItem({ imgNo, name}) {
+  return (
+    <>
+      {/* <div className="flex flex-col gap-[10px]">
+        <img src={`https://picsum.photos/id/${imgNo}/400/400`} />
+        <div className="text-center font-bold">{name}</div>
+      </div> */}
+      <div class="list-item">
+        <img src={`https://picsum.photos/id/${imgNo}/400/400`} />
+        <div class="item-name">{name}</div>
+      </div>
+    </>
+  );
+}
 
 function MyPage() {
 
@@ -41,11 +54,26 @@ function MyPage() {
 
           <div class="complete-list">
             <h2>완료한 관광지</h2>
+            {/* <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-[20px]"> */}
             <ul>
-              <li>관광지1</li>
-              <li>관광지2</li>
-              <li>관광지3</li>
-              <li>관광지4</li>
+              <li>
+                <ProdListItem imgNo={1} name={"관광지 1"} />
+              </li>
+              <li>
+                <ProdListItem imgNo={2} name={"관광지 2"} />
+              </li>
+              <li>
+                <ProdListItem imgNo={3} name={"관광지 3"} />
+              </li>
+              <li>
+                <ProdListItem imgNo={4} name={"관광지 4"} />
+              </li>
+              <li>
+                <ProdListItem imgNo={5} name={"관광지 5"} />
+              </li>
+              <li>
+                <ProdListItem imgNo={6} name={"관광지 6"} />
+              </li>
             </ul>
           </div>
 

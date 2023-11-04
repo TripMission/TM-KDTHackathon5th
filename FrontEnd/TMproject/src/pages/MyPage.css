@@ -93,6 +93,37 @@ body, h1 {
     flex-grow:2;
 }
 
+.container > .content > .complete-list > ul {
+    display:grid;
+}
+
+.container > .content > .complete-list > ul > li {
+    display: flex;
+}
+
+.container > .content > .complete-list > ul > li > div {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+}
+
+.container > .content > .complete-list > ul > li > div > img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.container > .content > .complete-list > ul > li > div > .item-name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
 /* 콘텐트 끝 */
 
 .container > footer {
