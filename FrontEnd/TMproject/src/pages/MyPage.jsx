@@ -11,13 +11,9 @@ import Chip from '@mui/material/Chip';
 import Avatar from '@mui/material/Avatar';
 // import Stack from '@mui/material/Stack';
 
-function ProdListItem({ imgNo, name}) {
+function ProdListItem({imgNo, name}) {
   return (
     <>
-      {/* <div className="flex flex-col gap-[10px]">
-        <img src={`https://picsum.photos/id/${imgNo}/400/400`} />
-        <div className="text-center font-bold">{name}</div>
-      </div> */}
       <div class="list-item">
         <img src={`https://picsum.photos/id/${imgNo}/400/400`} />
         <div class="item-name">{name}</div>
