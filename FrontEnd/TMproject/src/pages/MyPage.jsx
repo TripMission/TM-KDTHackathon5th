@@ -7,6 +7,10 @@ import AppBarHeader from "../components/AppBarHeader";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import Chip from '@mui/material/Chip';
+import Avatar from '@mui/material/Avatar';
+// import Stack from '@mui/material/Stack';
+
 
 
 function MyPage() {
@@ -19,14 +23,20 @@ function MyPage() {
 
         <section class="content">
           <div class="info">
-            <img src="https://media.bunjang.co.kr/product/233392017_1_1692231420_w360.jpg" alt="profile" />
+            {/* <img src="https://media.bunjang.co.kr/product/233392017_1_1692231420_w360.jpg" alt="profile" /> */}
+            <Avatar
+              alt="빵빵아옥지얌"
+              src="https://i.namu.wiki/i/rZ0vnAMLHqSzt2WHzkJ1bKQ-BIS1B2QENVq-OimxDFghh-PIsebI0MQMZzZIN4BumlOted0v68EmFsNAtwmL9Q.webp"
+              sx={{ width: 100, height: 100 }}
+            />
             <div class="info-text">
-              <h2>이름</h2>
+              <h2>빵빵이</h2>
             </div>
           </div>
 
           <div class="score">
-            <h2>점수</h2>
+            <Chip label={"점수"} variant="outlined"  className="!pt-1" />
+            {/* <h2>점수</h2> */}
           </div>
 
           <div class="complete-list">
