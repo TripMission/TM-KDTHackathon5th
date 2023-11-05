@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import "./MyPage.css";
 import "../components/Header.jsx";
@@ -9,6 +10,8 @@ import Footer from "../components/Footer";
 
 import Chip from '@mui/material/Chip';
 import Avatar from '@mui/material/Avatar';
+import Accordion from '@mui/material/Accordion';
+
 // import Stack from '@mui/material/Stack';
 
 function ProdListItem({imgNo, name}) {
@@ -23,6 +26,8 @@ function ProdListItem({imgNo, name}) {
 }
 
 function MyPage() {
+
+  const [completeListVisible, setcompleteListVisible] = useState(false); 
 
   return (
     <>
@@ -44,33 +49,39 @@ function MyPage() {
           </div>
 
           <div class="score">
-            <Chip label={"점수"} variant="outlined"  className="!pt-1" />
+            <Chip label={"점수: 1500"} variant="outlined"  className="!pt-1" />
             {/* <h2>점수</h2> */}
           </div>
 
           <div class="complete-list">
-            <h2>완료한 관광지</h2>
-            {/* <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-[20px]"> */}
-            <ul>
-              <li>
-                <ProdListItem imgNo={1} name={"관광지 1"} />
-              </li>
-              <li>
-                <ProdListItem imgNo={2} name={"관광지 2"} />
-              </li>
-              <li>
-                <ProdListItem imgNo={3} name={"관광지 3"} />
-              </li>
-              <li>
-                <ProdListItem imgNo={4} name={"관광지 4"} />
-              </li>
-              <li>
-                <ProdListItem imgNo={5} name={"관광지 5"} />
-              </li>
-              <li>
-                <ProdListItem imgNo={6} name={"관광지 6"} />
-              </li>
-            </ul>
+            <button onClick={() => setcompleteListVisible(!completeListVisible)}>
+              완료한 관광지 {completeListVisible ? "^" : "v"}
+            </button>
+           {
+              completeListVisible && (
+                <ul>
+                  <li>
+                    <ProdListItem imgNo={1} name={"관광지 1"} />
+                  </li>
+                  <li>
+                    <ProdListItem imgNo={2} name={"관광지 2"} />
+                  </li>
+                  <li>
+                    <ProdListItem imgNo={3} name={"관광지 3"} />
+                  </li>
+                  <li>
+                    <ProdListItem imgNo={4} name={"관광지 4"} />
+                  </li>
+                  <li>
+                    <ProdListItem imgNo={5} name={"관광지 5"} />
+                  </li>
+                  <li>
+                    <ProdListItem imgNo={6} name={"관광지 6"} />
+                  </li>
+                </ul>
+              )
+            }
+            
           </div>
 
         </section>
