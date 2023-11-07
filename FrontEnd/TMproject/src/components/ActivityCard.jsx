@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 export default function ActivityCard({ src, title, content }) {
     const navigate = useNavigate();
     const nav = () => {
-        navigate('/?'); //도전과제 사진 찍는 페이지로 넘어감
+        navigate('/Camera'); //도전과제 사진 찍는 페이지로 넘어감
     };
     return (
         <Card style={{ width: '100%' }}>
@@ -27,6 +27,6 @@ export default function ActivityCard({ src, title, content }) {
 
 const StyledImg = styled.img`
     width: 100%;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: auto;
     object-fit: contain;
 `;
