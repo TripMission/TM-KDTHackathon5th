@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { THEME } from '../constants/colors';
 import React from 'react';
 import ActivityCard from '../components/ActivityCard';
-import { Button, Navbar, Nav, Container } from 'react-bootstrap';
+import { Desktop, Mobile } from '../hooks/useMideaQuery';
 
 export default function SubPage() {
     const data = [
@@ -24,29 +24,39 @@ export default function SubPage() {
         },
     ];
     return (
-        <Layout title="도/시 페이지" hasBackButton>
-            <Wrapper>
-                <StyledH1>대구시</StyledH1>
-                <ImgWrapper>
-                    <Image src="img/tourguide_kor02.png" />
-                </ImgWrapper>
-                <RowWrapper>
-                    <div class="container text-center">
-                        <div class="row row-cols-2 g-3">
-                            {data.map((e) => {
-                                return (
-                                    <>
-                                        <div class="col-sm-4">
-                                            <ActivityCard src={e.src} title={e.title} content={e.content} />
-                                        </div>
-                                    </>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </RowWrapper>
-            </Wrapper>
-        </Layout>
+        <>
+            <Desktop>
+                <Layout title="도/시 페이지" hasBackButton>
+                    <Wrapper>
+                        <StyledH1>대구시</StyledH1>
+                        <ImgWrapper>
+                            <Image src="img/tourguide_kor02.png" />
+                        </ImgWrapper>
+                        <RowWrapper>
+                            <div class="container text-center">
+                                <div class="row row-cols-2 g-3">
+                                    {data.map((e) => {
+                                        return (
+                                            <>
+                                                <div class="col-sm-4">
+                                                    <ActivityCard src={e.src} title={e.title} content={e.content} />
+                                                </div>
+                                            </>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </RowWrapper>
+                    </Wrapper>
+                    <footer class="footer">
+                        <p>All rights reserved. @KT Aivle 소확행</p>
+                    </footer>
+                </Layout>
+            </Desktop>
+            <Mobile>
+                <div>모바일이에옹</div>
+            </Mobile>
+        </>
     );
 }
 const Wrapper = styled.div`
@@ -68,8 +78,8 @@ const StyledH1 = styled.h1`
     margin-bottom: 1.1rem;
 `;
 const Image = styled.img`
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 60%;
     border-radius: 20px;
 
     box-shadow: 0 -4px 36px rgba(0, 0, 0, 0.07);
