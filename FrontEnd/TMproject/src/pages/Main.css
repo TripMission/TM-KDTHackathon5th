@@ -9,9 +9,14 @@
     padding-top : 5%
 }
 .main {
-    height : 95%;
+    height : 150%;
     padding-left : 5%;
-    padding-top : 10%
+    padding-top : 1%
+}
+.mainMobile{
+  height : 150%;
+  padding-left : 5%;
+  padding-top : 10%
 }
 .geoSelect {
     font-size : 1rem;
