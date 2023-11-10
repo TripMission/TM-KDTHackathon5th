@@ -57,7 +57,7 @@ function MyPage() {
             <button onClick={() => setcompleteListVisible(!completeListVisible)}>
               완료한 관광지 {completeListVisible ? "^" : "v"}
             </button>
-           {
+            {
               completeListVisible && (
                 <ul>
                   <li>
