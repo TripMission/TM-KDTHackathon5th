@@ -46,10 +46,11 @@ class Main extends React.Component {
       nowPosition : result[0]['address_name']
     })
 
-    console.log(result[0])
   }
-  
 
+  deleteSpeech = (e) => {
+    e.target.parentNode.remove()
+  };
 
   geolocationError = (err) => {
     console.error(err);
@@ -71,13 +72,19 @@ class Main extends React.Component {
             {isLoading && <div>Loading...</div>}
             {!isLoading && (
               <div className='main'>
-                <div style={{ fontFamily: '"Noto Sans KR", sans-serif' }} className='geoSelect'>지역을 선택해주세요</div>
+                <div style={{ fontFamily: '"Noto Sans KR", sans-serif' }} className='geoSelect'>지역을 선택해주세요?</div>
                 <div style={{ fontFamily: '"Noto Sans KR", sans-serif' }} className='geoRecommendSelect'>추천받고 싶은 지역을 선택하세요</div>
                 <div style={{ fontFamily: '"Noto Sans KR", sans-serif' }} className='geoRecommendSelect'>위치 : {`${nowPosition}`}</div>              
                 <div className='mainPanel'>
                   <RegionButton></RegionButton>
                 </div>
+                <div className='speech-bubble'>
+                  <div className='speech-bubble-text'><a href='http://localhost:3001/subpage'>{`${nowPosition}`}에서 찾아볼까요?</a></div>
+                  <div className='speech-bubble-delete' onClick={this.deleteSpeech}>X</div>
+                </div>
               </div>
+
+
             )}
             <Footer hasFooter={true} />
           </Layout>
