@@ -172,6 +172,10 @@ p {
     color : white;
     font-size : 2rem;
   }
+  .mobile-speech-bubble-text{
+    color : white;
+    font-size : 1rem;
+  }
   .speech-bubble-delete{
     color : black;
     font-size : 2rem;
