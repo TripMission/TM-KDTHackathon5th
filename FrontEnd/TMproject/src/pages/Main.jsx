@@ -104,6 +104,10 @@ class Main extends React.Component {
                 <div className='mainPanel'>
                   <RegionButton></RegionButton>
                 </div>
+                <div className='speech-bubble'>
+                  <div className='mobile-speech-bubble-text'><a href='http://localhost:3001/subpage'>{`${nowPosition}`}에서 찾아볼까요?</a></div>
+                  <div className='speech-bubble-delete' onClick={this.deleteSpeech}>X</div>
+                </div>
               </div>
             )}
             <Footer hasFooter={true} />
